@@ -1,7 +1,43 @@
-import { Title } from './FavoritesPage.styled';
+import { Container, Title, Paragraph  } from './FavoritesPage.styled';
 
-const HalfPage = () => {
-  return <Title>Half Page</Title>;
+const FavoritesPage = () => {
+  return (
+    <Container>
+      
+        <div>
+          <Title>No Favorites Yet</Title>
+          <Paragraph>It looks like you haven&apos;t added any favorites yet. Start exploring and add some items to your favorites list!</Paragraph>
+        </div>
+
+    </Container>
+  );
 };
 
-export default HalfPage;
+export default FavoritesPage;
+
+// import { Container, Title, Paragraph, List, ListItem } from './FavoritesPage.styled';
+
+// const FavoritesPage = ({ favoritesList }) => {
+//   return (
+//     <Container>
+//       {favoritesList.length > 0 ? (
+//         <div>
+//           <Title>Your Favorites</Title>
+//           <List>
+//             {favoritesList.map((item, index) => (
+//               <ListItem key={index}>{item}</ListItem>
+//             ))}
+//           </List>
+//         </div>
+//       ) : (
+//         <div>
+//           <Title>No Favorites Yet</Title>
+//           <Paragraph>It looks like you haven&apos;t added any favorites yet. Start exploring and add some items to your favorites list!</Paragraph>
+//         </div>
+//       )}
+//     </Container>
+//   );
+// };
+
+// export default FavoritesPage;
+

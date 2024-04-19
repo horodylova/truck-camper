@@ -1,12 +1,13 @@
-import { Suspense } from 'react';
+import  { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import { Header } from '../Header/Header';
 
-const SharedLayout = () => {
+const SharedLayout = ({ children }) => { 
   return (
     <>
       <Header />
       <Suspense fallback={null}>
+        {children} 
         <Outlet />
       </Suspense>
     </>
@@ -14,3 +15,5 @@ const SharedLayout = () => {
 };
 
 export default SharedLayout;
+
+
