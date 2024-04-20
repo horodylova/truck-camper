@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-`;
 
-export const Title = styled.h1`
+export const Title = styled.h2`
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;

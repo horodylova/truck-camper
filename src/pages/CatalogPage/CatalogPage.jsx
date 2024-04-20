@@ -1,13 +1,9 @@
-import { Container, Block, Title, StyledLink } from './CatalogPage.styled';
+import { Container} from './CatalogPage.styled';
 
 const SecondPage = () => {
   return (
-    <Container>
-      <Block>
-        <Title>Second Page</Title>
-        <StyledLink to="/second/5">Half</StyledLink>
-      </Block>
-    </Container>
+    <Container/>
+     
   );
 };
 

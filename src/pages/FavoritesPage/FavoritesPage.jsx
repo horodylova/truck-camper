@@ -1,15 +1,14 @@
-import { Container, Title, Paragraph  } from './FavoritesPage.styled';
+import { Title, Paragraph  } from './FavoritesPage.styled';
 
 const FavoritesPage = () => {
   return (
-    <Container>
-      
-        <div>
+      <div className="background">
+        <div className='container'>
           <Title>No Favorites Yet</Title>
           <Paragraph>It looks like you haven&apos;t added any favorites yet. Start exploring and add some items to your favorites list!</Paragraph>
         </div>
 
-    </Container>
+        </div>
   );
 };
 
