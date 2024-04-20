@@ -6,8 +6,8 @@ export const Header = () => {
       <Logo>Truck Camper</Logo>
       <Navigation>
         <NavLink href="/">Home</NavLink>
-        <NavLink href="/catalog">Catalog</NavLink>
-        <NavLink href="/favorites">Favorites</NavLink>
+        <NavLink href="/truck-camper/catalog">Catalog</NavLink>
+        <NavLink href="/truck-camper/favorites">Favorites</NavLink>
       </Navigation>
     </HeaderContainer>
   );
