@@ -1,4 +1,4 @@
-import{u as o,j as e}from"./index-55473030.js";const n=o.div`
+import{u as o,j as e}from"./index-e23ed1ba.js";const n=o.div`
   background-color: #fff; 
 `,a=o.div`
   max-width: 800px;
