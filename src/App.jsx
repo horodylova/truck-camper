@@ -12,8 +12,8 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/catalog" element={<CatalogPage />} />
-          <Route path="/favorites" element={<FavoritesPage />} />
+          <Route path="/truck-camper/catalog" element={<CatalogPage />} />
+          <Route path="/truck-camper/favorites" element={<FavoritesPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
       </Suspense>
@@ -22,6 +22,8 @@ function App() {
 }
 
 export default App;
+
+
 
 
 
