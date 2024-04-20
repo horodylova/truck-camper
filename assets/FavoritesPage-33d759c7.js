@@ -1,4 +1,4 @@
-import{u as o,j as t}from"./index-e23ed1ba.js";const e=o.div`
+import{u as o,j as t}from"./index-09a531f3.js";const e=o.div`
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
