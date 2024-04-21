@@ -1,19 +1,20 @@
-import { useState } from 'react';
 import Location from '../../components/Location/Location'; 
+import { useState } from 'react'; // Путь к файлу компонента Location
 import { CatalogWrapper, LeftColumn, Filters, VehicleEquipment, VehicleType, RightColumn, SearchButton } from './CatalogPage.styled';
 
 const CatalogPage = () => {
-  const [ setLocation] = useState('');
+  const [ setSelectedLocation] = useState('');
 
-  const handleLocationChange = (newLocation) => {
-    setLocation(newLocation);
+  const handleLocationChange = (location) => {
+    setSelectedLocation(location);
+    console.log("Selected Location:", location);
   };
 
   return (
     <CatalogWrapper className="container">
       <LeftColumn>
-        <Location onLocationChange={handleLocationChange} /> 
-        <Filters>
+      <Location onLocationChange={handleLocationChange} />       
+       <Filters>
           <h3>Filters</h3>
         </Filters>
         <VehicleEquipment>
@@ -30,12 +31,10 @@ const CatalogPage = () => {
         <SearchButton>Search</SearchButton>
       </LeftColumn>
       <RightColumn>
+        {/* Здесь вы можете добавить компоненты для отображения карточек товаров */}
       </RightColumn>
     </CatalogWrapper>
   );
 };
 
 export default CatalogPage;
-
-
-

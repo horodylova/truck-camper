@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import Autosuggest from 'react-autosuggest';
 
 const Location = ({ onLocationChange }) => {
@@ -7,36 +7,34 @@ const Location = ({ onLocationChange }) => {
     'Los Angeles',
     'Chicago',
     'Houston',
-    
+    // Другие города...
   ];
 
   const [value, setValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
   const onChange = (event, { newValue }) => {
     setValue(newValue);
-    onLocationChange(newValue);
   };
 
   const onSuggestionsFetchRequested = ({ value }) => {
-    const inputValue = value.trim().toLowerCase();
-    const inputLength = inputValue.length;
-    const filteredCities = inputLength === 0 ? [] : cities.filter(city =>
-      city.toLowerCase().slice(0, inputLength) === inputValue
-    );
-
-    setSuggestions(filteredCities);
+    setSuggestions(getSuggestions(value));
   };
 
   const onSuggestionsClearRequested = () => {
     setSuggestions([]);
   };
 
-  const inputProps = {
-    placeholder: 'Enter location',
-    value,
-    onChange: onChange
+  const getSuggestions = (value) => {
+    const inputValue = value.trim().toLowerCase();
+    const inputLength = inputValue.length;
+    return inputLength === 0 ? cities : cities.filter(city =>
+      city.toLowerCase().slice(0, inputLength) === inputValue
+    );
   };
+
+  const getSuggestionValue = (suggestion) => suggestion;
 
   const renderSuggestion = (suggestion) => (
     <div>
@@ -44,16 +42,30 @@ const Location = ({ onLocationChange }) => {
     </div>
   );
 
+  const inputProps = {
+    placeholder: 'Enter location',
+    value,
+    onChange: onChange,
+    onFocus: () => setShowSuggestions(true),
+    onBlur: () => setShowSuggestions(false)
+  };
+
   return (
-    <Autosuggest
-      suggestions={suggestions}
-      onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-      onSuggestionsClearRequested={onSuggestionsClearRequested}
-      getSuggestionValue={(suggestion) => suggestion}
-      renderSuggestion={renderSuggestion}
-      inputProps={inputProps}
-    />
+    <div>
+      <Autosuggest
+        suggestions={showSuggestions ? suggestions : []}
+        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
+        onSuggestionsClearRequested={onSuggestionsClearRequested}
+        getSuggestionValue={getSuggestionValue}
+        renderSuggestion={renderSuggestion}
+        inputProps={inputProps}
+      />
+    </div>
   );
 };
 
 export default Location;
+
+
+
+
