@@ -1,4 +1,6 @@
-import { Title, Paragraph  } from './FavoritesPage.styled';
+import { Title, Paragraph, StyledButton } from './FavoritesPage.styled';
+import { Link } from 'react-router-dom';
+
 
 const FavoritesPage = () => {
   return (
@@ -6,6 +8,9 @@ const FavoritesPage = () => {
         <div className='container'>
           <Title>No Favorites Yet</Title>
           <Paragraph>It looks like you haven&apos;t added any favorites yet. Start exploring and add some items to your favorites list!</Paragraph>
+          <Link to="/catalog">
+        <StyledButton>Explore Catalog</StyledButton>
+        </Link>
         </div>
 
         </div>
