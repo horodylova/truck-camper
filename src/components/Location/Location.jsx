@@ -1,71 +1,45 @@
-import  { useState } from 'react';
-import Autosuggest from 'react-autosuggest';
+import   { useState } from 'react';
+import { LocationWrapper, Input, List, ListItem} from './Location.styled';
 
-const Location = ({ onLocationChange }) => {
+export const Location = ({ onLocationChange }) => {
+  const [showList, setShowList] = useState(false);
+  const [selectedCity, setSelectedCity] = useState('');
+
   const cities = [
     'New York',
     'Los Angeles',
     'Chicago',
     'Houston',
-    // Другие города...
+     
   ];
 
-  const [value, setValue] = useState('');
-  const [suggestions, setSuggestions] = useState([]);
-  const [showSuggestions, setShowSuggestions] = useState(false);
-
-  const onChange = (event, { newValue }) => {
-    setValue(newValue);
-  };
-
-  const onSuggestionsFetchRequested = ({ value }) => {
-    setSuggestions(getSuggestions(value));
-  };
-
-  const onSuggestionsClearRequested = () => {
-    setSuggestions([]);
-  };
-
-  const getSuggestions = (value) => {
-    const inputValue = value.trim().toLowerCase();
-    const inputLength = inputValue.length;
-    return inputLength === 0 ? cities : cities.filter(city =>
-      city.toLowerCase().slice(0, inputLength) === inputValue
-    );
-  };
-
-  const getSuggestionValue = (suggestion) => suggestion;
-
-  const renderSuggestion = (suggestion) => (
-    <div>
-      {suggestion}
-    </div>
-  );
-
-  const inputProps = {
-    placeholder: 'Enter location',
-    value,
-    onChange: onChange,
-    onFocus: () => setShowSuggestions(true),
-    onBlur: () => setShowSuggestions(false)
+  const handleLocationSelection = (city) => {
+    setSelectedCity(city);
+    onLocationChange(city);
+    setShowList(false);
   };
 
   return (
-    <div>
-      <Autosuggest
-        suggestions={showSuggestions ? suggestions : []}
-        onSuggestionsFetchRequested={onSuggestionsFetchRequested}
-        onSuggestionsClearRequested={onSuggestionsClearRequested}
-        getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
-        inputProps={inputProps}
+    <LocationWrapper>
+      <Input
+        type="text"
+        placeholder="Kyiv"
+        onFocus={() => setShowList(true)}
+        onBlur={() => setShowList(false)}
+        value={selectedCity}
+        readOnly
       />
-    </div>
+      {showList && (
+        <List>
+          {cities.map((city, index) => (
+            <ListItem key={index} onMouseDown={() => handleLocationSelection(city)}>
+              {city}
+            </ListItem>
+          ))}
+        </List>
+      )}
+    </LocationWrapper>
   );
 };
 
 export default Location;
-
-
-
-

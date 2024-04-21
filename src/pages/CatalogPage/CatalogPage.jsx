@@ -1,6 +1,6 @@
 import Location from '../../components/Location/Location'; 
 import { useState } from 'react'; // Путь к файлу компонента Location
-import { CatalogWrapper, LeftColumn, Filters, VehicleEquipment, VehicleType, RightColumn, SearchButton } from './CatalogPage.styled';
+import { CatalogWrapper, LeftColumn, LocationTitle, Filters, VehicleEquipment, VehicleType, RightColumn, SearchButton } from './CatalogPage.styled';
 
 const CatalogPage = () => {
   const [ setSelectedLocation] = useState('');
@@ -13,6 +13,7 @@ const CatalogPage = () => {
   return (
     <CatalogWrapper className="container">
       <LeftColumn>
+        <LocationTitle>Location</LocationTitle>
       <Location onLocationChange={handleLocationChange} />       
        <Filters>
           <h3>Filters</h3>

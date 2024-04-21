@@ -12,6 +12,16 @@ export const LeftColumn = styled.div`
   flex: 0 0 30%; 
 `;
 
+export const LocationTitle = styled.div`
+color: rgba(16, 24, 40, 0.60);
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 24px;
+`;
+
 export const Location = styled.div`
   margin-bottom: 20px;
 `;
