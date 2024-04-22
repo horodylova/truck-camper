@@ -1,23 +1,29 @@
 import styled from 'styled-components';
 import LocationIcon from '../../Icons/Small icons/location.png';
 
-export const LocationWrapper = styled.div``;
+export const LocationWrapper = styled.div`
+position: relative;
+
+`;
+
 
 export const Input = styled.input`
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  outline: none;
-  color: #101828;
+
+display: flex;
+padding: 18px 218px 18px 18px;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+border-radius: 10px;
+background: #F7F7F7;
 
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  background-repeat: no-repeat;
-  background-position: 10px center; 
+  background-image:(${LocationIcon})
+ 
 
   &:focus {
     border-color: var(--primary-txt-color);
@@ -26,23 +32,19 @@ export const Input = styled.input`
   &::placeholder {
     color: var(--primary-txt-color);
     font-family: Inter;
-    background-image: url(${LocationIcon} );
-    
+   
     font-size: 16px;
     font-style: normal;
     font-weight: var(--regular);
     line-height: 1.25;
    
-
-    background-repeat: no-repeat;
-    background-position: 10px center;
-    padding-left: 30px;
-  }
-
+ 
   
 `;
 
 export const List = styled.ul`
+position: absolute;
+  top: calc(100% + 5px); 
   top: 100%;
   left: 0;
   width: 300px;

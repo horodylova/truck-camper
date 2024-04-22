@@ -1,5 +1,5 @@
 import   { useState } from 'react';
-import { LocationWrapper, Input, List, ListItem} from './Location.styled';
+import { LocationWrapper, Input, List, ListItem } from './Location.styled';
 
 export const Location = ({ onLocationChange }) => {
   const [showList, setShowList] = useState(false);
@@ -23,12 +23,13 @@ export const Location = ({ onLocationChange }) => {
     <LocationWrapper>
       <Input
         type="text"
-        placeholder="Kyiv"
+        placeholder="Kyiv, Ukraine"
         onFocus={() => setShowList(true)}
         onBlur={() => setShowList(false)}
         value={selectedCity}
         readOnly
       />
+
       {showList && (
         <List>
           {cities.map((city, index) => (

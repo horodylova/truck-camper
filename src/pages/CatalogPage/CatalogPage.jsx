@@ -1,21 +1,20 @@
-import Location from '../../components/Location/Location'; 
-import { useState } from 'react'; // Путь к файлу компонента Location
+import { useState } from 'react';
 import { CatalogWrapper, LeftColumn, LocationTitle, Filters, VehicleEquipment, VehicleType, RightColumn, SearchButton } from './CatalogPage.styled';
+import Location from '../../components/Location/Location';
 
 const CatalogPage = () => {
-  const [ setSelectedLocation] = useState('');
+  const [ ,setSelectedLocation] = useState('');
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
-    console.log("Selected Location:", location);
   };
 
   return (
     <CatalogWrapper className="container">
       <LeftColumn>
         <LocationTitle>Location</LocationTitle>
-      <Location onLocationChange={handleLocationChange} />       
-       <Filters>
+        <Location onLocationChange={handleLocationChange} />       
+        <Filters>
           <h3>Filters</h3>
         </Filters>
         <VehicleEquipment>
@@ -39,3 +38,4 @@ const CatalogPage = () => {
 };
 
 export default CatalogPage;
+

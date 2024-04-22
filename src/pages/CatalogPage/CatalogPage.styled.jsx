@@ -14,16 +14,18 @@ export const LeftColumn = styled.div`
 
 export const LocationTitle = styled.div`
 color: rgba(16, 24, 40, 0.60);
+align-self: stretch;
 
 font-family: Inter;
 font-size: 16px;
 font-style: normal;
 font-weight: 500;
 line-height: 24px;
+margin-bottom:8px;
 `;
 
 export const Location = styled.div`
-  margin-bottom: 20px;
+marin-bottom:32px;
 `;
 
 export const Filters = styled.div`
