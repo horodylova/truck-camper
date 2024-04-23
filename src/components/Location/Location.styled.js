@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import LocationIcon from '../../Icons/Small icons/location.png';
 
 export const LocationWrapper = styled.div`
 position: relative;
 
 `;
-
 
 export const Input = styled.input`
 
@@ -14,15 +12,17 @@ padding: 18px 218px 18px 18px;
 flex-direction: column;
 align-items: flex-start;
 gap: 10px;
-border-radius: 10px;
+
 background: #F7F7F7;
+border: none;
+border-radius: 10px;
 
   font-family: Inter;
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  background-image:(${LocationIcon})
+  font-weight: var(--regular);
+  color: var(--primary-txt-color)
+  line-height: 1.25;
  
 
   &:focus {

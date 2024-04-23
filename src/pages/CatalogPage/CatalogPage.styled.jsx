@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CatalogWrapper = styled.div`
-  background-color: var(--white-color);
+  background-color: #FFF;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -25,16 +25,78 @@ margin-bottom:8px;
 `;
 
 export const Location = styled.div`
-marin-bottom:32px;
+
 `;
 
 export const Filters = styled.div`
-  margin-bottom: 20px;
+  margin-top:32px;
+  margin-bottom: 14px;
+  color: var(--grey-color);
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: var(--medium);
+line-height: 1.5;
 `;
 
 export const VehicleEquipment = styled.div`
-  margin-bottom: 20px;
+  margin-bottom: 24px;
+  color: var(--primary-txt-color);
+
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: var(--medium);
+line-height: 1.2;
+
+display: inline-flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 24px;
 `;
+
+export const EquipmentList = styled.ul`
+border-top: 1px solid rgba(16, 24, 40, 0.10);
+padding-top:24px;
+
+display: flex;
+width: 360px;
+align-items: flex-start;
+gap: 8px;
+flex-wrap: wrap;
+`
+
+export const EquipmentItem = styled.li`
+display: inline-block;
+height: 95px;
+padding: 17px;
+align-items: center;
+gap: 8px;
+
+border-radius: 10px;
+border: 1px solid rgba(16, 24, 40, 0.20);
+
+mix-blend-mode: multiply;
+
+&:hover{
+  border: 1px solid #E44848;
+}
+
+`;
+
+export const EquipmentItemSingle = styled.ul`
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 8px;
+`
+
+export const EquipmentIcon = styled.img`
+`
+export const EquipmentText = styled.p`
+`
 
 export const VehicleType = styled.div`
   margin-bottom: 20px;

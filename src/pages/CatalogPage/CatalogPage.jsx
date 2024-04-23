@@ -1,9 +1,26 @@
 import { useState } from 'react';
-import { CatalogWrapper, LeftColumn, LocationTitle, Filters, VehicleEquipment, VehicleType, RightColumn, SearchButton } from './CatalogPage.styled';
+import {
+  CatalogWrapper,
+  LeftColumn,
+  LocationTitle,
+  Filters,
+  VehicleEquipment,
+  EquipmentList,
+  EquipmentItem,
+  EquipmentItemSingle,
+  EquipmentText,
+  VehicleType,
+  RightColumn,
+  SearchButton,
+} from './CatalogPage.styled';
 import Location from '../../components/Location/Location';
+import { ReactComponent as TV } from '../../Icons/Big icons/TV.svg';
+import { ReactComponent as Gear } from '../../Icons/Big icons/Gear.svg';
+
+
 
 const CatalogPage = () => {
-  const [ ,setSelectedLocation] = useState('');
+  const [, setSelectedLocation] = useState('');
 
   const handleLocationChange = (location) => {
     setSelectedLocation(location);
@@ -13,15 +30,34 @@ const CatalogPage = () => {
     <CatalogWrapper className="container">
       <LeftColumn>
         <LocationTitle>Location</LocationTitle>
-        <Location onLocationChange={handleLocationChange} />       
-        <Filters>
-          <h3>Filters</h3>
-        </Filters>
-        <VehicleEquipment>
-          <h3>Vehicle Equipment</h3>
-        </VehicleEquipment>
+        <Location onLocationChange={handleLocationChange} />
+        <Filters>Filters</Filters>
+        <VehicleEquipment>Vehicle Equipment</VehicleEquipment>
+        <EquipmentList>
+          <EquipmentItem>
+            <EquipmentItemSingle>
+            <TV width="32" height="32"/>
+              <EquipmentText>TV</EquipmentText>
+            </EquipmentItemSingle>
+          </EquipmentItem>
+          <EquipmentItem>
+            <EquipmentItemSingle>
+            <Gear width="32" height="32" />
+            <EquipmentText>Automatic</EquipmentText>
+            </EquipmentItemSingle>
+          </EquipmentItem>
+          <EquipmentItem>
+            <EquipmentItemSingle></EquipmentItemSingle>
+          </EquipmentItem>
+          <EquipmentItem>
+            <EquipmentItemSingle></EquipmentItemSingle>
+          </EquipmentItem>
+          <EquipmentItem>
+            <EquipmentItemSingle></EquipmentItemSingle>
+          </EquipmentItem>
+        </EquipmentList>
         <VehicleType>
-          <h3>Vehicle Type</h3>
+          Vehicle Type
           <ul>
             <li>Van</li>
             <li>Fully Integrated</li>
@@ -38,4 +74,3 @@ const CatalogPage = () => {
 };
 
 export default CatalogPage;
-
