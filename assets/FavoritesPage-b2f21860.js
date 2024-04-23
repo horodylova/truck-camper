@@ -1,4 +1,4 @@
-import{u as r,j as o,L as t}from"./index-b305efe8.js";const e=r.h2`
+import{u as r,j as o,L as t}from"./index-82420d41.js";const e=r.h2`
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 20px;
