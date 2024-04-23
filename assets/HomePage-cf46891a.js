@@ -1,4 +1,4 @@
-import{u as r,j as e,L as n}from"./index-bf3c1b7d.js";const a=r.div`
+import{u as r,j as e,L as n}from"./index-b5c19650.js";const a=r.div`
   color: var(--white-color); 
   margin: 0 auto;
   padding: 20px;
