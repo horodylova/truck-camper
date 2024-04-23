@@ -9,7 +9,8 @@ export const CatalogWrapper = styled.div`
 `;
 
 export const LeftColumn = styled.div`
-  flex: 0 0 30%; 
+  // flex: 0 0 30%; 
+  width:360px;
 `;
 
 export const LocationTitle = styled.div`
@@ -122,13 +123,45 @@ export const VehicleTypeTitle = styled.div`
 export const VehicleList = styled.ul`
 border-top: 1px solid rgba(16, 24, 40, 0.10);
 padding-top:24px;
-gap: 8px;
+gap: 10px;
+display: flex;
+margin-bottom:64px;
 `;
-export const VehicleType = styled.li`
-`
+
+export const VehicleItem = styled.li`
+display: flex;
+height: 95px;
+align-items: center;
+gap: 8px;
+
+border-radius: 10px;
+border: 1px solid rgba(16, 24, 40, 0.20);
+mix-blend-mode: multiply;
+
+&:hover{
+  border: 1px solid var(--red-color);
+}
+`;
+ export const VehicleItemSingle = styled.div`
+ display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 9px;
+ `;
+export const VehicleText = styled.p`
+color: var(--primary-txt-color);
+
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: var(--medium);
+line-height: 1.25;
+`;
 
 export const RightColumn = styled.div`
-  flex: 0 0 70%;
+  // flex: 0 0 70%;
 `;
 
 export const SearchButton = styled.button`
@@ -141,5 +174,14 @@ border-radius: 200px;
 color: var(--white-color);
 background-color: var(--red-color);
 border: none;
+
+color: #FFF;
+
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: var(--medium);
+line-height: 1.5;
+letter-spacing: -0.08px;
 `;
 

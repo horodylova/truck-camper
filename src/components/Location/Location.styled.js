@@ -8,7 +8,10 @@ position: relative;
 export const Input = styled.input`
 
 display: flex;
-padding: 18px 218px 18px 18px;
+padding-top: 18px;
+padding-bottom:18px;
+padding-left: 18px;
+width:360px;
 flex-direction: column;
 align-items: flex-start;
 gap: 10px;

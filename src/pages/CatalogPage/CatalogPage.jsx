@@ -11,6 +11,9 @@ import {
   EquipmentText,
   VehicleTypeTitle,
   VehicleList,
+  VehicleItem, 
+  VehicleItemSingle,
+  VehicleText,
   RightColumn,
   SearchButton,
 } from './CatalogPage.styled';
@@ -70,7 +73,7 @@ const CatalogPage = () => {
             </EquipmentItemSingle>
           </EquipmentItem>
           <EquipmentItem>
-          <EquipmentItemSingle style={{ paddingLeft: "12px", paddingRight: "12px" }}>
+          <EquipmentItemSingle style={{ paddingLeft: "12px", paddingRight: "12px",  paddingBottom: '19px' }}>
             <Shower width="32" height="32"/>
             <EquipmentText>Shower/WC</EquipmentText>
             </EquipmentItemSingle>
@@ -78,27 +81,27 @@ const CatalogPage = () => {
         </EquipmentList>
         <VehicleTypeTitle>Vehicle Type</VehicleTypeTitle>
             <VehicleList>
-            <EquipmentItem>
+            <VehicleItem>
           
-            <EquipmentItemSingle style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+            <VehicleItemSingle style={{ padding: '17px 30px', height: '95px'}}>
             <Van width="40" height="28"/>
-            <EquipmentText>Van</EquipmentText>
-            </EquipmentItemSingle>
-          </EquipmentItem>
-          <EquipmentItem>
+            <VehicleText>Van</VehicleText>
+            </VehicleItemSingle>
+          </VehicleItem>
+          <VehicleItem>
           
-          <EquipmentItemSingle style={{ paddingLeft: "24px", paddingRight: "24px" }}>
+          <VehicleItemSingle style={{ padding: '17px 24px' }}>
           <Integrated width="40" height="28"/>
-          <EquipmentText>Fully<br/>Integrated</EquipmentText>
-          </EquipmentItemSingle>
-        </EquipmentItem>
-        <EquipmentItem>
+          <VehicleText>Fully<br/>Integrated</VehicleText>
+          </VehicleItemSingle>
+        </VehicleItem>
+        <VehicleItem>
           
-          <EquipmentItemSingle style={{ paddingLeft: "30px", paddingRight: "30px" }}>
+          <VehicleItemSingle style={{ padding: '17px 30px' }}>
           <Alcove width="40" height="28"/>
-          <EquipmentText>Alcove</EquipmentText>
-          </EquipmentItemSingle>
-        </EquipmentItem>
+          <VehicleText>Alcove</VehicleText>
+          </VehicleItemSingle>
+        </VehicleItem>
           </VehicleList>
 
         <SearchButton>Search</SearchButton>
