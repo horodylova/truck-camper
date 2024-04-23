@@ -19,14 +19,14 @@ import {
 } from './CatalogPage.styled';
 import Location from '../../components/Location/Location';
 import { ReactComponent as TV } from '../../Icons/Big icons/TV.svg';
-import { ReactComponent as Gear } from '../../Icons/Big icons/Gear.svg';
-import { ReactComponent as Wind} from '../../Icons/Big icons/wind.svg';
-import { ReactComponent as Shower } from '../../Icons/Big icons/Shower.svg';
-import { ReactComponent as Food } from '../../Icons/Big icons/Food.svg';
+import { ReactComponent as Gear } from '../../Icons/Big-icons/Gear.svg';
+import { ReactComponent as Wind} from '../../Icons/Big-icons/wind.svg';
+import { ReactComponent as Shower } from '../../Icons/Big-icons/Shower.svg';
+import { ReactComponent as Food } from '../../Icons/Big-icons/Food.svg';
 
-import {ReactComponent as Van} from '../../Icons/Big icons/Van.svg';
-import {ReactComponent as Alcove} from '../../Icons/Big icons/alcove.svg';
-import {ReactComponent as Integrated} from '../../Icons/Big icons/integrated.svg';
+import {ReactComponent as Van} from '../../Icons/Big-icons/Van.svg';
+import {ReactComponent as Alcove} from '../../Icons/Big-icons/alcove.svg';
+import {ReactComponent as Integrated} from '../../Icons/Big-icons/integrated.svg';
 
 
 
