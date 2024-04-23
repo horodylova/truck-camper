@@ -25,7 +25,7 @@ import { ReactComponent as Shower } from '../../Icons/Big-icons/Shower.svg';
 import { ReactComponent as Food } from '../../Icons/Big-icons/Food.svg';
 
 import {ReactComponent as Van} from '../../Icons/Big-icons/Van.svg';
-import {ReactComponent as Alcove} from '../../Icons/Big-icons/alcove.svg';
+import {ReactComponent as Alcove} from '../../Icons/Big-icons/Alcove.svg';
 import {ReactComponent as Integrated} from '../../Icons/Big-icons/integrated.svg';
 
 
