@@ -1,13 +1,5 @@
 import styled from 'styled-components';
 
-export const CatalogWrapper = styled.div`
-  background-color: #FFF;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 100px 64px;
-`;
-
 export const LeftColumn = styled.div`
   // flex: 0 0 30%; 
   width:360px;
@@ -160,9 +152,7 @@ font-weight: var(--medium);
 line-height: 1.25;
 `;
 
-export const RightColumn = styled.div`
-  // flex: 0 0 70%;
-`;
+
 
 export const SearchButton = styled.button`
 display: inline-flex;
